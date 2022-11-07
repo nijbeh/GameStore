@@ -1,10 +1,15 @@
 const express = require ('express');
 const app = express();
+app.set('view engine', 'ejs')
 
-const PORT = process.env.PORT || 5000;
+
+const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-res.send('<h1>Hello Game Store!</h1>');
+//  res.json({message:"Welcome to the Game Store"})
+//res.download('index.js')
+
+res.render('index', {text: "World"})
 
 })
 
