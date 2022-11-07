@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/8cecb204-a182-491e-bdf6-bac37a6f3822/appservices/subscriptions/8cecb204-a182-491e-bdf6-bac37a6f3822/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/game-store",
+    "appService.deploySubpath": "."
+}
