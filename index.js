@@ -10,8 +10,14 @@ app.get('/', (req, res) => {
 //res.download('index.js')
 
 res.render('index', {text: "World"})
-
 })
+
+const gameRouter = require ('./routes/games')
+const studioRouter = require('./routes/studios')
+
+
+app.use('/games', gameRouter)
+app.use('/studios', studioRouter)
 
 app.listen (PORT, () => console.log(`Server started ${PORT}`));
 
