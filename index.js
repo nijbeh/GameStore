@@ -1,7 +1,7 @@
 const express = require ('express');
 const app = express();
 app.set('view engine', 'ejs')
-
+app.use (logger)
 
 const PORT = process.env.PORT || 3000;
 
@@ -18,6 +18,11 @@ const studioRouter = require('./routes/studios')
 
 app.use('/games', gameRouter)
 app.use('/studios', studioRouter)
+
+function logger (req,res,next) {
+    console.log(req.originalUrl)
+    next()
+}
 
 app.listen (PORT, () => console.log(`Server started ${PORT}`));
 
